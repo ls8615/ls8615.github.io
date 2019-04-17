@@ -31,12 +31,12 @@ public class CvmesService {
         // 进程停止
         Log.Write(strServiceFlag, LogLevel.Warning, "进程停止");
 
-        // 通知各服务线程退出
+        // 通知各服务线程退出12
         Db.update("update T_SYS_SERVICE set SERVICE_STATUS = 0 where SERVER_FLAG = ?", PropKit.getInt("serverFlag"));
         // 通知进程退出
         blnStopFlag = true;
 
-        //记录服务变更时间
+        //记录服务变更时间12
         serviceStatusChange(String.format("%s-flag%s", strServiceFlag, PropKit.getInt("serverFlag")), 0);
     }
 
